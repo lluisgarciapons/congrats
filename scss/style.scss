@@ -1,0 +1,145 @@
+#volume {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  > h2 {
+    font-size: 40px;
+  }
+}
+
+.flier {
+  pointer-events: none;
+}
+
+.flier img {
+  width: 100px;
+}
+
+.flier > * {
+  /* Adjust animation duration to change the element’s speed */
+  animation: fly 50s linear infinite;
+  pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: -1;
+}
+
+/* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+@keyframes fly {
+  98.001%,
+  0% {
+    display: block;
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg);
+  }
+
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg);
+  }
+
+  15.001%,
+  18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg);
+  }
+
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg);
+  }
+
+  40.001%,
+  43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg);
+  }
+
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg);
+  }
+
+  65.001%,
+  68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg);
+  }
+
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+#confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  background: red;
+  color: white;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.confetti {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  opacity: 0.75;
+  z-index: 0;
+  /* gpu acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  &.blue {
+    background: #00a8ff;
+    color: #00a8ff;
+  }
+  &.green {
+    background: #4cd137;
+    color: #4cd137;
+  }
+  &.yellow {
+    background: #fbc531;
+    color: #fbc531;
+  }
+  &.red {
+    background: #e84118;
+    color: #e84118;
+  }
+  &.pink {
+    background: #ff9ff3;
+    color: #ff9ff3;
+  }
+  &.circle {
+    border-radius: 50%;
+  }
+  &.rectangle {
+    padding: 0 1px;
+  }
+  &.felicidades {
+    // padding: 20px;
+    // background-color: black;
+    &:before {
+      font-size: 24px;
+      content: "felicidades Simon";
+    }
+  }
+}

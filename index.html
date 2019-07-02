@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet/less" type="text/css" href="css/style.css" />
+    <title>Felicidades Simon</title>
+  </head>
+  <body id="body">
+    <div id="flier" class="flier" hidden>
+      <img src="calvo.jpg" alt="Simon calvo" />
+    </div>
+    <div id="volume">
+      <h2>Please, turn the volume up.</h2>
+    </div>
+    <audio id="myAudio">
+      <source src="Simon.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="confetti-container" onclick="emit()"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
