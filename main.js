@@ -62,7 +62,7 @@ function emit() {
     var simon = document.createElement("div");
     simon.setAttribute("class", "flier");
     var img = document.createElement("img");
-    img.setAttribute("src", "calvo.jpg");
+    img.setAttribute("src", "jaco.jpg");
     simon.appendChild(img);
     document.getElementById("body").append(simon);
     // simon.style.display = "block";

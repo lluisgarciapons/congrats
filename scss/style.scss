@@ -1,3 +1,5 @@
+// sass --watch scss/style.scss:css/style.css
+
 #volume {
   width: 50%;
   margin: auto;
@@ -12,7 +14,7 @@
 }
 
 .flier img {
-  width: 100px;
+  width: 200px;
 }
 
 .flier > * {
@@ -139,7 +141,7 @@
     // background-color: black;
     &:before {
       font-size: 24px;
-      content: "felicidades Simon";
+      content: "felicidades Jacobo";
     }
   }
 }
